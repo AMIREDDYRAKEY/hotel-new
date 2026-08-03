@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-luxury-bg text-stone-200 antialiased font-sans;
+    background-color: #0c0a09;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0a09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2520;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
+/* Luxury animations and glows */
+.gold-text-glow {
+  text-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+}
+
+.luxury-card-glow:hover {
+  box-shadow: 0 10px 30px -10px rgba(197, 168, 128, 0.15);
+}
+
+/* Date input appearance cleanup */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(0.4) saturate(1) hue-rotate(330deg);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Custom gold button borders */
+.btn-gold-outline {
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  background: transparent;
+  color: #c5a880;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  border-color: #c5a880;
+  background: rgba(197, 168, 128, 0.08);
+  box-shadow: 0 0 15px rgba(197, 168, 128, 0.25);
+}
+
+.btn-gold-solid {
+  background: #c5a880;
+  color: #0c0a09;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-solid:hover {
+  background: #d4b893;
+  box-shadow: 0 0 20px rgba(197, 168, 128, 0.4);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(22, 19, 16, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 168, 128, 0.08);
+}
