@@ -30,11 +30,7 @@ const start = async () => {
   }
 
   try {
-    await mongoose.connect(MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      serverSelectionTimeoutMS: 10000
-    });
+    await mongoose.connect(process.env.RENDER_MONGO_URI, {});
     console.log("✅ MongoDB Connected");
 
     // register routes after DB is connected
