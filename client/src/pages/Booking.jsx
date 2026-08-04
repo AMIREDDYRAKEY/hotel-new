@@ -8,7 +8,7 @@ import roomJuniorImg from '../assets/room_junior.jpg';
 import roomExecutiveImg from '../assets/room_executive.jpg';
 import roomPresidentialImg from '../assets/room_presidential.jpg';
 
-export const Booking = ({ bookingState, setBookingState, authUser }) => {
+export const Booking = ({ bookingState, setBookingState, authUser, setActivePage }) => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [successCode, setSuccessCode] = useState('');
   const [formData, setFormData] = useState({
